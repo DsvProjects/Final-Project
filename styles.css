@@ -1,0 +1,153 @@
+/* ------------------------------
+   Global Reset and Variables
+------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --black: #000;
+    --dark-gray: #333333;
+    --medium-gray: #666;
+    --light-gray: #ccc;
+    --white: #fff;
+    --font-stack: 'Sunflower', 'Trebuchet MS', sans-serif;
+  }
+  
+  /* ------------------------------
+     Base Body Styles
+  ------------------------------ */
+  body {
+    font-family: var(--font-stack);
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+  }
+  
+  /* ------------------------------
+     Container
+     - Wraps the entire page to keep
+       everything at a fixed width
+  ------------------------------ */
+  .container {
+    width: 1280px;        /* or 1440px if preferred */
+    max-width: 100%;      /* ensures responsiveness on smaller screens */
+    margin: 0 auto;       /* centers the container */
+    background-color: var(--white);
+  }
+  
+  /* ------------------------------
+     Header
+     - Company name on the left
+     - Navigation on the right
+  ------------------------------ */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 8px solid var(--medium-gray);
+  }
+  
+  header h1 a {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 1.5rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    border-bottom: 4px solid transparent;
+  }
+  
+  nav a:hover,
+  nav a.active {
+    border-bottom: 4px solid var(--dark-gray);
+  }
+  
+  /* ------------------------------
+     Hero Section
+     - Large image spanning the container
+  ------------------------------ */
+  .hero {
+    width: 100%;
+  }
+  
+  .hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+  }
+  
+  /* ------------------------------
+     Intro Section
+     - Center the heading & paragraph
+  ------------------------------ */
+  .intro {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  
+  .intro h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .intro p {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+  
+  /* ------------------------------
+     Content Section
+     - Two content blocks, each with
+       an image on the left, text on the right
+  ------------------------------ */
+  .content {
+    display: flex;
+    flex-direction: column;  /* stacks the articles vertically */
+    gap: 2rem;
+    padding: 2rem 1rem;
+  }
+  
+  .content-group {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+  
+  .content-group img {
+    width: 400px;   /* Adjust to your liking */
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .content-group div {
+    flex: 1;        /* allows text to expand and wrap nicely */
+    line-height: 1.5;
+  }
+  
+  /* ------------------------------
+     Footer
+  ------------------------------ */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    border-top: 8px solid var(--medium-gray);
+  }
+  
